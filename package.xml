@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Meta>
+<title>Kumi no Spawn</title>
+<id>yom.mods.kuminospawn</id>
+<author>Dot</author>
+<loadPriority>100</loadPriority>
+<description>Removes Kumiromi's Scythe mob spawning ability.</description>
+<version>0.23.11</version>
+</Meta>
