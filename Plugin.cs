@@ -1,10 +1,11 @@
 ﻿using System;
 using BepInEx;
 using HarmonyLib;
+using UnityEngine;
 
 namespace Mod_Kumi_no_spawn;
 
-[BepInPlugin("yom.mods.kuminospawn", "Kumi no Spawn", "0.0.1")]
+[BepInPlugin("yom.mods.kuminospawn", "Kumi no Spawn", "1.0.0")]
 public class KumiNoSpawn : BaseUnityPlugin
 {
   private void Start()
@@ -21,11 +22,12 @@ public class CharaEnemyPatch
 {
   static bool Prefix(ref int __result, int ele)
     {
-        Msg.SayRaw("Evalue: " + ele);
         if (ele == 665)
         {
+            __result = 0;
              return false;
         }
+        __result = ele;
         return true;
     }
 }
